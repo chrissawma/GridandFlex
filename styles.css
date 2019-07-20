@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color:  rgba(5,106,136,1.000);
+    background-size: 100vh, 100vw;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    margin: 1.5% 0 1.5% 0;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 5px solid rgb(219, 161, 36, 0.95);
+    border-radius: 3px;
+    width: 10vw;
+    height: 12vh;
+    font-size: 2em;
+    margin: 12% 0 12 0%;
+    background-color: rgba(160,33,88,1.000);
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(131, 129, 125, 0.59);
+    padding: 10% 10%;
+    animation: "tumble";
+}
+
+.container {
+    margin-left: 1.3%;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-rows: 12.5%, 12.5%, 12.5%,12.5%, 12.5%, 12.5%, 12.5%, 12.5%;
+    grid-gap: 0%;
+}
+
+.container:hover .item {
+    animation: tumble;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    
+}
+.container:hover .pic {
+    animation: pulse;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes tumble{
+    from {
+        background-color: rgba(21, 167, 235, 1);
+    }
+    50% {
+        background-color:rgba(160,33,88, .8);
+    }
+    to {
+        background-color: rgba(96, 228, 129, .9);
+    }
+}
+@keyframes pulse{
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.8);
+    }
+    to {
+        transform: scale(0.8);
+        ;
+    }
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+
+
+}
